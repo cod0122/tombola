@@ -1,0 +1,17 @@
+totale 1112
+-rw-rw-r-- 1 alb alb  84017 dic 27 19:12 antilope.png
+-rw-rw-r-- 1 alb alb  38524 dic 27 19:02 aquila.png
+-rw-rw-r-- 1 alb alb 121990 dic 27 19:33 cervo.png
+-rw-rw-r-- 1 alb alb  73437 dic 27 19:11 cinciallegra.png
+-rw-rw-r-- 1 alb alb  94719 dic 27 19:13 corvo.png
+-rw-rw-r-- 1 alb alb  75191 dic 27 19:22 fenicottero.png
+-rw-rw-r-- 1 alb alb  39727 dic 27 19:22 gorilla.png
+-rw-rw-r-- 1 alb alb  11475 dic 23 12:26 logo_tmb.png
+-rw-rw-r-- 1 alb alb  94999 dic 27 19:12 lupo.png
+-rw-rw-r-- 1 alb alb  58832 dic 27 19:16 pulcinelladimare.png
+-rw-rw-r-- 1 alb alb  47436 dic 27 19:12 rana.png
+-rw-rw-r-- 1 alb alb 111172 dic 27 19:30 riccio.png
+-rw-rw-r-- 1 alb alb  98986 dic 27 19:12 tartaruga.png
+-rw-rw-r-- 1 alb alb  83522 dic 27 19:23 topo.png
+-rw-rw-r-- 1 alb alb      0 dic 31 19:28 ufo.txt
+-rw-rw-r-- 1 alb alb  70853 dic 27 19:24 upupa.png
