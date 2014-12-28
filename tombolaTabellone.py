@@ -416,17 +416,14 @@ class Tabellone:
         _posBoxVincite = [_x, _y]
         _posVincite =  [_posBoxVincite[0] + int(_dimBoxVincite[0] * 1.25)
                                         , int(_y)]
-        _rectVincite = pygame.Rect(_posBoxVincite[0]
-                    , _posBoxVincite[1], _dimBoxVincite[0]
-                    , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN
-                    , CONST.KCOL_NERO , _rectVincite, 0
-                    , _dimBoxVincite[2], _dimBoxVincite[3])
-                    
         #--- QUATERNA
-        self._RettArrot.drawRoundRect(self._SCREEN
-                                    , CONST.KCOL_NERO, _rectVincite, 0
-                                    , _dimBoxVincite[2], _dimBoxVincite[3])
+        pygame.draw.rect(self._SCREEN
+                                    , CONST.KCOL_NERO 
+                                    , (_posBoxVincite[0]
+                                       , _posBoxVincite[1]
+                                       , _dimBoxVincite[0]*1.10
+                                       , _dimBoxVincite[1]*1.10)
+                                    ,0 )
         _textSurfaceObj = _fontObj.render('Quaterna', True
                     , CONST.KCOL_NERO, CONST.KCOL_NERO)
         self._SCREEN.blit(_textSurfaceObj
@@ -437,15 +434,13 @@ class Tabellone:
                                         + int(_dimBoxVincite[0] * 0.50) 
         _posVincite[0] = _posBoxVincite[0]  + _dimBoxVincite[0] * 1.25 
         #--- CINQUINA
-        _rectVincite = pygame.Rect(_posBoxVincite[0]
-                    , _posBoxVincite[1], _dimBoxVincite[0]
-                    , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_NERO 
-                    , _rectVincite, 0, _dimBoxVincite[2]
-                    , _dimBoxVincite[3])
-        self._RettArrot.drawRoundRect(self._SCREEN
-                    , CONST.KCOL_NERO, _rectVincite, 0
-                    , _dimBoxVincite[2], _dimBoxVincite[3])
+        pygame.draw.rect(self._SCREEN
+                                    , CONST.KCOL_NERO 
+                                    , (_posBoxVincite[0]
+                                       , _posBoxVincite[1]
+                                       , _dimBoxVincite[0]*1.10
+                                       , _dimBoxVincite[1]*1.10)
+                                    ,0 )
         _textSurfaceObj = _fontObj.render('Cinquina', True
                     , CONST.KCOL_NERO, CONST.KCOL_NERO)
         self._SCREEN.blit(_textSurfaceObj
@@ -456,15 +451,13 @@ class Tabellone:
                                         + int(_dimBoxVincite[0] * 0.50) 
         _posVincite[0] = _posBoxVincite[0]  + _dimBoxVincite[0] * 1.25 
         #--- DECINA
-        _rectVincite = pygame.Rect(_posBoxVincite[0]
-                    , _posBoxVincite[1], _dimBoxVincite[0]
-                    , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_NERO 
-                    , _rectVincite, 0, _dimBoxVincite[2]
-                    , _dimBoxVincite[3])
-        self._RettArrot.drawRoundRect(self._SCREEN
-                    , CONST.KCOL_NERO, _rectVincite, 0
-                    , _dimBoxVincite[2], _dimBoxVincite[3])
+        pygame.draw.rect(self._SCREEN
+                                    , CONST.KCOL_NERO 
+                                    , (_posBoxVincite[0]
+                                       , _posBoxVincite[1]
+                                       , _dimBoxVincite[0]*1.10
+                                       , _dimBoxVincite[1]*1.10)
+                                    ,0 )
         _textSurfaceObj = _fontObj.render('Decina', True
                     , CONST.KCOL_NERO, CONST.KCOL_NERO)
         self._SCREEN.blit(_textSurfaceObj
@@ -475,15 +468,13 @@ class Tabellone:
                                         + int(_dimBoxVincite[0] * 0.50) 
         _posVincite[0] = _posBoxVincite[0]  + _dimBoxVincite[0] * 1.25 
         #--- TOMBOLA
-        _rectVincite = pygame.Rect(_posBoxVincite[0]
-                                , _posBoxVincite[1], _dimBoxVincite[0]
-                                , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_NERO 
-                                , _rectVincite, 0, _dimBoxVincite[2]
-                                , _dimBoxVincite[3])
-        self._RettArrot.drawRoundRect(self._SCREEN
-                                , CONST.KCOL_NERO, _rectVincite, 0
-                                , _dimBoxVincite[2], _dimBoxVincite[3])
+        pygame.draw.rect(self._SCREEN
+                                    , CONST.KCOL_NERO 
+                                    , (_posBoxVincite[0]
+                                       , _posBoxVincite[1]
+                                       , _dimBoxVincite[0]*1.10
+                                       , _dimBoxVincite[1]*1.10)
+                                    ,0 )
         _textSurfaceObj = _fontObj.render('TOMBOLA', True
                     , CONST.KCOL_NERO, CONST.KCOL_NERO)
         self._SCREEN.blit(_textSurfaceObj
@@ -507,17 +498,24 @@ class Tabellone:
 
         #_width = self._dimTabellone[1] 
         _dimBoxVincite =  [_rectTmbObj.height*0.70, _rectTmbObj.height*0.90
-                                            , int(10 * _risCoeff), int(10 * _risCoeff)]
+                                            , 10, 10] #int(1 * _risCoeff)]
         _posBoxVincite = [_x, _y]
         _posVincite =  [_posBoxVincite[0] + int(_dimBoxVincite[0] * 1.25)
                                         , int(_y)]
         _rectVincite = pygame.Rect(_posBoxVincite[0]
                     , _posBoxVincite[1], _dimBoxVincite[0]
                     , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN
-                    , CONST.KCOL_NERO , _rectVincite, 0
-                    , _dimBoxVincite[2], _dimBoxVincite[3])
-                    
+        pygame.draw.rect(self._SCREEN
+                                    , CONST.KCOL_NERO 
+                                    , (_posBoxVincite[0]
+                                       , _posBoxVincite[1]
+                                       , _dimBoxVincite[0]*1.10
+                                       , _dimBoxVincite[1]*1.10)
+                                    ,0 )
+        #self._RettArrot.drawRoundRect(self._SCREEN
+        #            , CONST.KCOL_NERO , _rectVincite, 0
+        #            , _dimBoxVincite[2], _dimBoxVincite[3])
+        #            
         #--- QUATERNA
         if self._quaternaOK == 1 and self._flgBlink:
                             self._RettArrot.drawRoundRect(self._SCREEN
@@ -545,9 +543,9 @@ class Tabellone:
                     , _rectVincite, 0, _dimBoxVincite[2]
                     , _dimBoxVincite[3])
         if self._cinquinaOK == 1 and self._flgBlink:
-            self._RettArrot.drawRoundRect(self._SCREEN
-                    , CONST.KCOL_GIALLO, _rectVincite, 0
-                    , _dimBoxVincite[2], _dimBoxVincite[3])
+            self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_GIALLO
+                    , _rectVincite, 0, _dimBoxVincite[2]
+                    , _dimBoxVincite[3])
         else:
             self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_BLU
                     , _rectVincite, self._cinquinaOK
@@ -589,9 +587,11 @@ class Tabellone:
         _rectVincite = pygame.Rect(_posBoxVincite[0]
                                 , _posBoxVincite[1], _dimBoxVincite[0]
                                 , _dimBoxVincite[1]) 
-        self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_NERO 
-                                , _rectVincite, 0, _dimBoxVincite[2]
-                                , _dimBoxVincite[3])
+        #self._RettArrot.drawRoundRect(self._SCREEN, CONST.KCOL_NERO 
+        #                        , (_rectVincite[0], _rectVincite[1]
+        #                        , _rectVincite[2]*1.10, _rectVincite[3]*1.10)
+        #                        , 0, _dimBoxVincite[2]
+        #                        , _dimBoxVincite[3])
         if self._tombolaOK == 1 and self._flgBlink:
             self._RettArrot.drawRoundRect(self._SCREEN
                                 , CONST.KCOL_GIALLO, _rectVincite, 0
@@ -738,7 +738,7 @@ class Tabellone:
 
     def on_scriveNomePartita(self, nomeGioco='', a_nomePNG=''
                                                  , startDataOra=''): 
-        """ Espone l'ultimo Numero Uscito """
+        """ Espone riquadro con immagine della partita """
         print ('DBG on_scriveNomePartita ')
         #--- dicitura nome gioco
         _fontObj = pygame.font.Font('freesansbold.ttf'
@@ -750,11 +750,11 @@ class Tabellone:
         _height =  _width  / 16*9 # box a dimensione 16:9 come il TV 
         #--- box dell'immagine
         _rectBoxNomeGioco = pygame.Rect(self._posTabellone[0]  
-                                                                  + self._dimTabellone[0] 
-                                                                  + int(_width *0.02)
+                                                   + self._dimTabellone[0] 
+                                                   + int(_width *0.02)
                                                 , self._rectBoxNumUscito[1] 
-                                                    + self._rectBoxNumUscito[3] 
-                                                    + int(_height *0.05)
+                                                   + self._rectBoxNumUscito[3] 
+                                                   + int(_height *0.05)
                                             , _width
                                             , _height)
         #--- box pulizia prima di fare l'immagine

@@ -79,10 +79,10 @@ class Tombola():
         self.startTombola(self._nomeGioco)
 
     def startTombola(self, a_nomeGioco=''):
-        """lancio tombola x un nuovo GIOCO"""
+        """lancio tombola """
         if a_nomeGioco=='':
             if self._nomeGioco == '':
-                self.startNuovaTombola()  #occhio e' ricusrsiva
+                self.startNuovaTombola()  #occhio e' ricursiva
                 return
         self._idNomeGioco = self.getIdNomeGioco(self._nomeGioco)
         self._setStartDataOra()
@@ -247,7 +247,7 @@ class Tombola():
         _nomeFileGioco = self._NomiFileGioco[self._idNomeGioco] # torna il nome file
         if not os.path.isfile(CONST.KPATH_IMG + _nomeFileGioco): # se manca il file
             self._caricaNomiFileGioco() # ricarica tutti i file
-            self._idNomeGioco = self.getIdNomeGioco()
+            self._idNomeGioco = self.getIdNomeGioco(self._nomeGioco)
             self._nomeGioco =  self._nomiGioco[self._idNomeGioco]
             _nomeFileGioco = self._NomiFileGioco[self._idNomeGioco] # torna il nome file
         return _nomeFileGioco 
@@ -257,10 +257,10 @@ class Tombola():
 
     def getIdNomeGioco(self, a_nomeGioco='tombola'):
         try:
-            __idNomeGioco =  self._nomiGioco.index(a_nomeGioco)
+            __idNomeGioco = self._nomiGioco.index(a_nomeGioco)
         except ValueError:
         #--- altrimenti carica un'immagine random
-            __idNomeGioco = random.randrange(1,len(self._nomiGioco))
+            __idNomeGioco = random.randrange(1,len(self._nomiGioco)) 
         return __idNomeGioco
 
     def getStatoTombolaDesc(self):

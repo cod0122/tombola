@@ -187,11 +187,12 @@ class App:
 
     def onStart(self):
         #--- settaggi iniziali e disegna il tabellone 
-       #--- Inizialmente parte sempre ripristinando l'ultima partita
+        #--- Inizialmente parte sempre ripristinando l'ultima partita
         self._Tombola = self._TombolaStato.ripriStato()
+        self._Tombola.startTombola()
         self._Tabellone.on_disegnaTabellone(self._numeriUsciti)
-        if self._Tombola.getIdNomeGioco() == 0:
-            self._Tombola.startTombola()
+        #if self._Tombola.getIdNomeGioco() == 0:
+        #    self._Tombola.startTombola()
          
         self._Tabellone.on_disegnaBoxNumeroUscito() 
         _nomeGioco = self._Tombola.getNomeGioco()
@@ -928,7 +929,7 @@ if __name__ == "__main__" :
     global iApp 
     iApp = App()
     
-    ilog.stampa('Argomenti iniziali: ' \
+    ilog.stampa('Argomenti iniziali: ' 
              , [_arg_tipoInput, _arg_risoluzVideo, _arg_tipoDisplay])
 
     #almeno devono essere indicati input e dim dello screen es. 640 480
