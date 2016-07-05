@@ -1,0 +1,5 @@
+Prima bisogna avere installato python 3.2 e pygame
+poi lanciare:
+python setup.py build
+
+vedi anche questa pagina web: http://blog.notfaqs.com/2011/09/python-32-create-executable-with.html
