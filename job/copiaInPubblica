@@ -1,2 +1,0 @@
-#--- Copia i file da cartella di appoggio a quella di lavoro
-cp appoggio/* ../pubblica/.
